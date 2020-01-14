@@ -55,55 +55,55 @@ https://devtalk.nvidia.com/default/topic/1042964/jetson-agx-xavier/the-spi-devic
 
 4.  修改如下代码段
 
-　`spi@3210000 {`
+　spi@3210000 {
 
-​                            `compatible = "nvidia,tegra186-spi";`
+​                            compatible = "nvidia,tegra186-spi";
 
-​                            `reg = <0x0 0x3210000 0x0 0x10000>;`
+​                            reg = <0x0 0x3210000 0x0 0x10000>;
 
-​                            `interrupts = <0x0 0x24 0x4>;`
+​                            interrupts = <0x0 0x24 0x4>;
 
-​                            `\#address-cells = <0x1>;`
+​                            \#address-cells = <0x1>;
 
-​                            `\#size-cells = <0x0>;`
+​                            \#size-cells = <0x0>;
 
-​                            `iommus = <0x2 0x20>;`
+​                            iommus = <0x2 0x20>;
 
-​                            `dma-coherent;`
+​                            dma-coherent;
 
-​                            `dmas = <0x1e 0xf 0x1e 0xf>;`
+​                            dmas = <0x1e 0xf 0x1e 0xf>;
 
-​                            `dma-names = "rx", "tx";`
+​                            dma-names = "rx", "tx";
 
-​                            `spi-max-frequency = <0x3dfd240>;`
+​                            spi-max-frequency = <0x3dfd240>;
 
-​                            `nvidia,clk-parents = "pll_p", "clk_m";`
+​                            nvidia,clk-parents = "pll_p", "clk_m";
 
-​                            `clocks = <0x4 0x87 0x4 0x66 0x4 0xe>;`
+​                            clocks = <0x4 0x87 0x4 0x66 0x4 0xe>;
 
-​                            `clock-names = "spi", "pll_p", "clk_m";`
+​                            clock-names = "spi", "pll_p", "clk_m";
 
-​                            `resets = <0x5 0x5b>;`
+​                            resets = <0x5 0x5b>;
 
-​                            `reset-names = "spi";`
+​                            reset-names = "spi";
 
-​                            `status = "okay";`
+​                            status = "okay";
 
-​                            `linux,phandle = <0x172>;`
+​                            linux,phandle = <0x172>;
 
-​                            `phandle = <0x172>;`
+​                            phandle = <0x172>;
 
-​                            `spidev@0 {`
+​                            spidev@0 {
 
-​                                          `compatible = "spidev";`
+​                                          compatible = "spidev";
 
-​                                          `reg = <0x0>;`
+​                                          reg = <0x0>;
 
-​                                          `spi-max-frequency = <0x1312d00>;`
+​                                          spi-max-frequency = <0x1312d00>;
 
-​                            `};`
+​                            };
 
-​              `};`
+​              };
 
 5. 将dts文件编译为dtb文件
 
