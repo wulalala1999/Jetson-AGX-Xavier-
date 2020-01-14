@@ -40,7 +40,8 @@ https://devtalk.nvidia.com/default/topic/1042964/jetson-agx-xavier/the-spi-devic
 
 把这个路径(***JetPack_4.2_Linux_P2888/Linux_for_Tegra/bootloader/t186ref/BCT/tegra19x-mb1-pinmux-p2888-0000-a04-p2822-0000-b01.cfg)***下的这个文件(***tegra19x-mb1-pinmux-p2888-0000-a04-p2822-0000-b01.cfg***)中的这几行修改成如下形式：
 
-`pinmux.0x0243d040 = 0x00000400; # spi1_sck_pz3: rsvd1, pull-down, tristate-enable, input-enable, lpdr-disable`
+```
+pinmux.0x0243d040 = 0x00000400; # spi1_sck_pz3: rsvd1, pull-down, tristate-enable, input-enable, lpdr-disable`
 
 `pinmux.0x0243d020 = 0x00000450; # spi1_miso_pz4: rsvd1, pull-down, tristate-enable, input-enable, lpdr-disable`
 
@@ -48,7 +49,10 @@ https://devtalk.nvidia.com/default/topic/1042964/jetson-agx-xavier/the-spi-devic
 
 `pinmux.0x0243d010 = 0x00000400; # spi1_cs0_pz6: rsvd1, pull-up, tristate-enable, input-enable, lpdr-disable`
 
-`pinmux.0x0243d050 = 0x00000400; # spi1_cs1_pz7: rsvd1, pull-up, tristate-enable, input-enable, lpdr-disable`
+`pinmux.0x0243d050 = 0x00000400; # spi1_cs1_pz7: rsvd1, pull-up, tristate-enable, input-enable, lpdr-disable
+```
+
+
 
 ## 修改dtb
 
@@ -146,6 +150,7 @@ Xavier 需要重新修改一下Pinmux
 
 3. 修改spidev0.0的引脚
 
+   ```
    `sudo devmem2 0x0243d040 word 0x00000400` 
    `sudo devmem2 0x0243d020 word 0x00000458` 
    `sudo devmem2 0x0243d058 word 0x00000400` 
@@ -155,6 +160,7 @@ Xavier 需要重新修改一下Pinmux
    `sudo devmem2 0x0c302050 word 0x00000450` 
    `sudo devmem2 0x0c302028 word 0x00000400` 
    `sudo devmem2 0x0c302038 word 0x00000400`
+   ```
    
    不同的spi需要更改的引脚不同，具体想参考官方文档。
 
