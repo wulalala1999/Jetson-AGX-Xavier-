@@ -55,6 +55,7 @@ https://devtalk.nvidia.com/default/topic/1042964/jetson-agx-xavier/the-spi-devic
 
 4.  修改如下代码段
 
+```
 　spi@3210000 {
 
 ​                            compatible = "nvidia,tegra186-spi";
@@ -104,6 +105,9 @@ https://devtalk.nvidia.com/default/topic/1042964/jetson-agx-xavier/the-spi-devic
 ​                            };
 
 ​              };
+```
+
+
 
 5. 将dts文件编译为dtb文件
 
