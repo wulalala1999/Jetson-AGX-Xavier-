@@ -50,6 +50,15 @@ pinmux.0x0243d058 = 0x00000400; # spi1_mosi_pz5: rsvd1, pull-down, tristate-enab
 pinmux.0x0243d010 = 0x00000400; # spi1_cs0_pz6: rsvd1, pull-up, tristate-enable, input-enable, lpdr-disable
 
 pinmux.0x0243d050 = 0x00000400; # spi1_cs1_pz7: rsvd1, pull-up, tristate-enable, input-enable, lpdr-disable
+
+
+pinmux.0x0c302048 = 0x00000400; # spi2_sck_pcc0: spi2, tristate-disable, input-disable, io_high_voltage-disable, lpdr-disable
+
+pinmux.0x0c302050 = 0x00000450; # spi2_miso_pcc1: spi2, tristate-enable, input-enable, io_high_voltage-disable, lpdr-disable
+
+pinmux.0x0c302028 = 0x00000400; # spi2_mosi_pcc2: spi2, tristate-disable, input-disable, io_high_voltage-disable, lpdr-disable
+
+pinmux.0x0c302038 = 0x00000400; # spi2_cs0_pcc3: spi2, tristate-disable, input-disable, io_high_voltage-disable, lpdr-disable
 ```
 
 
@@ -120,7 +129,7 @@ pinmux.0x0243d050 = 0x00000400; # spi1_cs1_pz7: rsvd1, pull-up, tristate-enable,
 ​              };
 ```
 
-
+d
 
 5. 将dts文件编译为dtb文件
 
@@ -136,9 +145,9 @@ pinmux.0x0243d050 = 0x00000400; # spi1_cs1_pz7: rsvd1, pull-up, tristate-enable,
 
 在这一步之后，Xavier就行相当与重新安装了系统
 
-## 修改Pinmux
+## 手动修改Pinmux
 
-Xavier 需要重新修改一下Pinmux
+在刷机之后可以测试一下spi是不是可以用，如果不可用，则可以尝试一下手动修改Pinmux，但是这么修改是无法保存的，重新启动后还是要再修改。如果需要一直保存还是要修改主机中的***tegra19x-mb1-pinmux-p2888-0000-a04-p2822-0000-b01.cfg***
 
 1. 去Xavier的***/dev***路径中查看是否有spidev*文件，例如spidev0.0
 
