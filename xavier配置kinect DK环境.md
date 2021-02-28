@@ -232,6 +232,8 @@ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
    
    进入源码根目录中 scripts 文件夹,复制99-k4a.rules文件至 /etc/udev/rules.d/ 
    
+   运行kaviewer时，不用添加sudo
+   
    ```
    cd Azure-Kinect-Sensor-SDK/scripts 
    sudo cp 99-k4a.rules /etc/udev/rules.d/
@@ -240,7 +242,7 @@ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
  ## 五 测试
  
  
-    k4aviewer
+    ./build/bin/k4aviewer
    
    
     
