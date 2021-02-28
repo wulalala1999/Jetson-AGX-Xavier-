@@ -37,7 +37,7 @@ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
    
 ## 二 下载 kinect DK 源码 并且完成依赖安装
 1. 下载源码
-    `git clone -b https://github.com/microsoft/Azure-Kinect-Sensor-SDK.git`
+    `git clone https://github.com/microsoft/Azure-Kinect-Sensor-SDK.git`
 2. 安装依赖
     在~/Azure-Kinect-Sensor-SDK/scripts/docker 路径下找到setup-ubuntu.sh文件，使用gedit打开
     
@@ -202,7 +202,7 @@ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
     
     `sudo bash ./setup-ubuntu.sh`
     
-    在编译后可能会出现powershell找不到包的情况，但是不影响使用，可忽略，其他如果完成可进行下一步。
+    在编译后可能会出现powershell找不到包的情况,无法安装，但是不影响使用，可忽略，其他如果完成可进行下一步。
     
 ##  三 编译SDK
     
