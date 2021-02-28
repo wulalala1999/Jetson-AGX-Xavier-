@@ -208,7 +208,7 @@ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
     
    编译过程中需要在线下载额外的依赖包，下载的地址在~/Azure-Kinect-Sensor-SDK/.gitmodules中，libyuv包需要翻墙才能下载，在这里需要将其地址改为Github上的源。在~/Azure-Kinect-Sensor-SDK/路径下按下Ctrl+h按键，显示隐藏文件，此时可以发现.gitmodules文件，找到libyuv对应的url,将其替换为下面地址即可。
    
-    `url = https://github.com/lemenkov/libyuv.git`
+    url = https://github.com/lemenkov/libyuv.git
     
    编译
     ```
